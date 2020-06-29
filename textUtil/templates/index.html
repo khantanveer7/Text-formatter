@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>TEXT UTIL</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">SITE NAME</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2 class="text-center my-3">Welcome To Text Utils:</h2>
+      <form action="/analyze" , method="post"> {% csrf_token %}
+        
+        <div class="form-group">
+          <textarea name="text" class="form-control" rows="8"></textarea>
+        </div>
+        <p class="text-danger">Select Any One Of Them*</p>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" name="uppercase">
+            <label class="custom-control-label" for="customSwitch1">UPPER CASE</label>
+          </div>
+          <br>
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch2" name="lowercase">
+            <label class="custom-control-label" for="customSwitch2" >lower case</label>
+          </div>
+          <br>
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch3" name="removepunc">
+            <label class="custom-control-label" for="customSwitch3">Remove Punctuation</label>
+          </div>
+          <br>
+
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch4" name="spaceremove">
+            <label class="custom-control-label" for="customSwitch4">Remove Extra Space</label>
+          </div>
+          <br>
+          <!-- <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1" name="uppercase">
+            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+          </div> -->
+        
+
+        <br><button type="submit" class="btn btn-dark">Convert Text</button>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
