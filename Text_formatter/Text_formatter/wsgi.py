@@ -1,5 +1,5 @@
 """
-WSGI config for textUtil project.
+WSGI config for Text_formatter project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'textUtil.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Text_formatter.settings')
 
 application = get_wsgi_application()
